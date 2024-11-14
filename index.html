@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie= edge">
-        <script src="app.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="box1">
-                <h1>AVENGERS CHARACTER SEARCH</h1>
-            </div>
-        </header>
-        <div class="box2">
-            <main>
-                <div class="box3">
-                    <h2>Search by Full Name or Alias</h2>
-                    <form action="superheroes.php" method="post">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Avengers Character Search</title>
+</head>
+<body>
+    <header>
+        <div class="box1">
+            <h1>AVENGERS CHARACTER SEARCH</h1>
+        </div>
+    </header>
+    <div class="box2">
+        <main>
+            <div class="box3">
+                <h2>Search by Full Name or Alias</h2>
+                <form>
                     <div class="searchBar">
-					    <input type="text" name="search" id="search" placeholder="e.g.Captain America or Steve Rogers">
-					    <button class="btn" type="button" id="searchBtn">Search</button>
-				    </div>
-                    </form>
-                </div>
-        
-                <div class="box4">
-                    <h3>RESULT</h3>
-                    <hr>
-                    <p id="heroLst"></p>
-                </div>
+                        <input type="text" name="search" id="search-field" placeholder="e.g. Captain America or Steve Rogers">
+                        <button class="btn" type="button" id="search-btn">Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="box4">
+                <h3>RESULT</h3>
+                <hr>
                 <div id="result"></div>
-        </div>
-        
-        <div class="box5">
-            <footer>
-                <p>Copyright &copy; 2020, Ahmal Chambers</p>
-            </footer>	
-        </div>
-    </body>
+            </div>
+        </main>
+    </div>
+
+    <div class="box5">
+        <footer>
+            <p>Copyright &copy; 2024, Paris Wolfe</p>
+        </footer>	
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
