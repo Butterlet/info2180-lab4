@@ -1,42 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie= edge">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>INFO2180</title>
+        <link rel="stylesheet" href="styles.css" />
         <script src="app.js"></script>
-    </head>
+      </head>
+      <header>
+        <h1> Avengers Character Search </h1>
+      </header>
+      <main>
     <body>
-        <header>
-            <div class="box1">
-                <h1>AVENGERS CHARACTER SEARCH</h1>
-            </div>
-        </header>
-        <div class="box2">
-            <main>
-                <div class="box3">
-                    <h2>Search by Full Name or Alias</h2>
-                    <form action="superheroes.php" method="post">
-                    <div class="searchBar">
-					    <input type="text" name="search" id="search" placeholder="e.g.Captain America or Steve Rogers">
-					    <button class="btn" type="button" id="searchBtn">Search</button>
-				    </div>
-                    </form>
-                </div>
-        
-                <div class="box4">
-                    <h3>RESULT</h3>
-                    <hr>
-                    <p id="heroLst"></p>
-                </div>
-                <div id="result"></div>
-        </div>
-        
-        <div class="box5">
-            <footer>
-                <p>Copyright &copy; 2024, Paris Wolfe</p>
-            </footer>	
+        <button id="btn" type="submit">search</button>
+        <form action="superheroes.php" method="post">
+            <label for="search">Search:</label><br>
+            <input type="text" id="search" name="search"><br>
+        </form>
+        <h2>RESULT</h2>
+        <div>
+            <p id="result"></p>
         </div>
     </body>
+</main>
 </html>
