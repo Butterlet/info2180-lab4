@@ -1,32 +1,33 @@
-window.onload = function() {
-    let searchButton = document.getElementById("btn");
+window.onload= function(){
+    var search = document.getElementById('searchBtn');
+    var form = document.getElementsByTagName('form')[0];
+    var result=document.getElementById("search");
+    var request;
 
-    searchButton.addEventListener('click', function(e) {
-        e.preventDefault(); 
+    search.addEventListener("click", function(){
+        request = new XMLHttpRequest();
 
-        var searchQuery = document.getElementById("superheroes").value.trim();
+        var url="http://localhost/info2180-lab4/superheroes.php?query="+result.value+"";
+        console.log(url);
+        request.open('GET',url);
+        request.send();
+        request.onreadystatechange = displaySuperHeroes;
 
-        if (!searchQuery) {
-            alert("Please enter a superhero name or alias.");
-            return;
-        }
-
-        var heroRequest = new XMLHttpRequest();
-
-        var urlCode = "superheroes.php?query=" + encodeURIComponent(searchQuery);
-
-        heroRequest.onreadystatechange = function() {
-            if (heroRequest.readyState == XMLHttpRequest.DONE) {
-                if (heroRequest.status == 200) {
-                    var hero = heroRequest.responseText;
-                    var result = document.getElementById("result");
-                    result.innerHTML = hero;                 } else {
-                    alert("Error Detected: " + heroRequest.statusText);
-                }
-            }
-        };
-
-        heroRequest.open("GET", urlCode, true);
-        heroRequest.send();
     });
+
+    function displaySuperHeroes()
+    {
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200){
+                var response = request.responseText;
+                var heroList = document.getElementById("heroLst")
+                heroList.innerHTML = response;
+            }
+            else
+            {
+            alert("Error, Unable to generate list!");
+            }
+        }
+    }   
 };
