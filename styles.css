@@ -1,0 +1,61 @@
+*{
+    font-size: 18px;
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif; 
+  }
+
+  header{
+	background-color: #57A0D3;
+	padding: 1em;
+}
+
+header h1{
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 48px;
+}
+
+.box2{
+	background-color: #F5F6Fa; 
+	color: #000000;
+	padding: 1em;
+}
+
+.box3{
+	text-align: left;
+	padding: 1em;
+}
+
+.box4{
+	text-align: left;
+	padding: 1em;
+}
+
+.box5{
+	text-align: center;
+	padding: 1em;
+}
+
+#search{
+	height: 30px;
+	width: 900px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px;
+	box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+#searchBtn{
+	height: 50px;
+	width: 100px;
+	padding: 10px;
+	background: #8B0000;
+	color: #FFFFFF;
+	border: 1px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+#searchBtn:hover{
+	background: #FFBFBA;
+	cursor: pointer;
+}
